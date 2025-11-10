@@ -38,7 +38,10 @@ class ControlAfficherVillageTest {
 		String[] donnees = controlAfficherVillage.donnerNomsVillageois();
 		
 		assertEquals("Abraracourcix", donnees[0]);
-		//TODO
+		assertEquals("Gaulois 1", donnees[1]);
+		assertEquals("Gaulois 2", donnees[2]);
+		assertEquals("le druide Druide 1", donnees[3]);
+		assertNotEquals("Personne", donnees[3]);
 	}
 
 	@Test
