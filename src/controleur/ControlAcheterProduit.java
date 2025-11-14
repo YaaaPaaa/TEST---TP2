@@ -25,6 +25,7 @@ public class ControlAcheterProduit {
 		int j = 0;
 		for (int i = 2; i < etatMarche.length; i+=3) {
 			produitVendu[j] = etatMarche[i];
+			j++;
 		}
 		return produitVendu;
 	}

@@ -10,13 +10,11 @@ import villagegaulois.Village;
 
 class ControlVerifierIdentiteTest {
 	private Village village;
-	private Chef abraracourcix;
 	
 	@BeforeEach
 	public void initialiserSituation() {
-		System.out.println("Initialisation...");
 		village = new Village("le village des Irréductibles",10,5);
-		abraracourcix = new Chef("Abraracourcix", 10, village);
+		Chef abraracourcix = new Chef("Abraracourcix", 10, village);
 		village.setChef(abraracourcix);
 	}
 
@@ -29,11 +27,13 @@ class ControlVerifierIdentiteTest {
 	@Test
 	void testVerifierIdentite() {
 		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
-		controlEmmenager.ajouterGaulois("Bonemine",10);
+		controlEmmenager.ajouterGaulois("Gaulois 1",10);
 		
 		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
-		assertTrue(controlVerifierIdentite.verifierIdentite("Bonemine"));
+		assertTrue(controlVerifierIdentite.verifierIdentite("Gaulois 1"));
 		assertFalse(controlVerifierIdentite.verifierIdentite("Existe pas"));
+		
+		assertTrue(controlVerifierIdentite.verifierIdentite("Abraracourcix"));
 	}
 
 }

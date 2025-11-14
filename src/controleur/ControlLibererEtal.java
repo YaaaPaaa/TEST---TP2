@@ -20,11 +20,11 @@ public class ControlLibererEtal {
 	 * 
 	 * @param nomVendeur
 	 * @return donneesEtal est un tableau de chaine contenant
-	 * 		[0] : un boolean indiquant si l'étal est occupé
+	 * 		[0] : un boolean indiquant si l'ï¿½tal est occupï¿½
 	 * 		[1] : nom du vendeur
 	 * 		[2] : produit vendu
-	 * 		[3] : quantité de produit à vendre au début du marché
-	 * 		[4] : quantité de produit vendu
+	 * 		[3] : quantitï¿½ de produit ï¿½ vendre au dï¿½but du marchï¿½
+	 * 		[4] : quantitï¿½ de produit vendu
 	 */
 	public String[] libererEtal(String nomVendeur) {
 		String[] donneesEtal = null;
