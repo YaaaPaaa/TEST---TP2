@@ -31,6 +31,7 @@ class ControlPrendreEtalTest {
 	void testResteEtals() {
 		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
 		
+		controlVerifierIdentite = new ControlVerifierIdentite(village);
 		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(controlVerifierIdentite, village);
 		assertTrue(controlPrendreEtal.resteEtals());
 		
@@ -64,9 +65,10 @@ class ControlPrendreEtalTest {
 		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
 		controlEmmenager.ajouterGaulois("Bonemine",10);
 		
-		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
-		assertTrue(controlVerifierIdentite.verifierIdentite("Bonemine"));
-		assertFalse(controlVerifierIdentite.verifierIdentite("Existe pas"));
+		controlVerifierIdentite = new ControlVerifierIdentite(village);
+		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(controlVerifierIdentite, village);
+		assertTrue(controlPrendreEtal.verifierIdentite("Bonemine"));
+		assertFalse(controlPrendreEtal.verifierIdentite("Existe pas"));
 	}
 
 }
